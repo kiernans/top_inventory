@@ -1,0 +1,28 @@
+{
+  "name": "top_inventory",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tsc -w & node --watch build/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "dotenv": "^17.0.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-async-handler": "^1.2.0",
+    "express-validator": "^7.2.1",
+    "pg": "^8.16.3",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.0",
+    "eslint": "^9.30.0",
+    "globals": "^16.2.0",
+    "typescript-eslint": "^8.35.0"
+  }
+}

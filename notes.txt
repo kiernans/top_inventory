@@ -1,0 +1,46 @@
+Manhwa inventory:
+    Authors
+    Genre
+    Manhwa
+
+Needs CRUD - Create, Read, Update, Delete
+
+createAuthorGet - Renders form   /create
+createGenreGet - Renders form
+createManhwaGet - Renders form
+createAuthorPost
+createGenrePost
+createManhwaPost
+
+getAuthorById
+getGenreById
+getManhwaById
+getAllAuthors
+getAllGenres
+getAllManhwa
+
+updateAuthorGet - Render form   /:id/update
+updateGenreGet - Render form
+updateManhwaGet - Render form
+updateAuthorPost
+updateGenrePost
+updateManhwaPost
+
+deleteAuthorPost                /:id/delete
+deleteGenrePost
+deleteManhwaPost
+
+/index
+    Displays all manhwa
+        Button next to it to update
+        Button next to it to delete
+    Button at bottom to create new
+    
+/create    
+    Form to create new manhwa
+    
+/:id/update
+    Displays form for updating
+
+/:id/delete
+    Deletes manhwa with POST

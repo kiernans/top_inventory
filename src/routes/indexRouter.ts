@@ -1,7 +1,8 @@
 import { Router } from "express";
+import manhwaController from "../controllers/manhwaController"
 
 const indexRouter = Router();
 
-indexRouter.get("/", (req, res) => { res.send("Index") });
+indexRouter.get("/", manhwaController);
 
 export default indexRouter;

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tsc -w & node --watch build/app.js"
+    "dev": "npx tsc -w & node --watch build/app.js",
+    "init": "npx tsc && node build/db/populatedb.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.30.0",
+    "@types/pg": "^8.15.4",
     "eslint": "^9.30.0",
     "globals": "^16.2.0",
     "typescript-eslint": "^8.35.0"

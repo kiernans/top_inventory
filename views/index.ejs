@@ -7,7 +7,22 @@
 </head>
 
 <body>
-    <%= webtoons %>
+    <h1>
+        <%= title %>
+    </h1>
+    <% if(webtoons) {%>
+        <% webtoons.forEach((webtoon)=> { %>
+            <ul>
+                <li>Title: <%= webtoon.title%>
+                </li>
+                <li>Author: <%= webtoon.author%>
+                </li>
+                <li>Genre: <%= webtoon.genre%>
+                </li>
+            </ul>
+
+            <%})}%>
+                <a href="/create">Create new Webtoon</a>
 </body>
 
 </html>

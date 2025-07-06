@@ -1,46 +1,46 @@
-Manhwa inventory:
+Webtoon inventory:
     Authors
     Genre
-    Manhwa
+    Webtoon
 
 Needs CRUD - Create, Read, Update, Delete
 
 createAuthorGet - Renders form   /create
 createGenreGet - Renders form
-createManhwaGet - Renders form
+createWebtoonGet - Renders form
 createAuthorPost
 createGenrePost
-createManhwaPost
+createWebtoonPost
 
 getAuthorById
 getGenreById
-getManhwaById
+getWebtoonById
 getAllAuthors
 getAllGenres
-getAllManhwa
+getAllWebtoon
 
 updateAuthorGet - Render form   /:id/update
 updateGenreGet - Render form
-updateManhwaGet - Render form
+updateWebtoonGet - Render form
 updateAuthorPost
 updateGenrePost
-updateManhwaPost
+updateWebtoonPost
 
 deleteAuthorPost                /:id/delete
 deleteGenrePost
-deleteManhwaPost
+deleteWebtoonPost
 
 /index
-    Displays all manhwa
+    Displays all Webtoon
         Button next to it to update
         Button next to it to delete
     Button at bottom to create new
     
 /create    
-    Form to create new manhwa
-    
+    Form to create new Webtoon
+
 /:id/update
     Displays form for updating
 
 /:id/delete
-    Deletes manhwa with POST
+    Deletes Webtoon with POST

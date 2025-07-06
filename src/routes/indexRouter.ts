@@ -1,8 +1,10 @@
 import { Router } from "express";
-import manhwaController from "../controllers/manhwaController"
+import webtoonController from "../controllers/webtoonController"
 
 const indexRouter = Router();
 
-indexRouter.get("/", manhwaController);
+indexRouter.get("/", webtoonController.getAllWebtoons);
+indexRouter.get("/create", webtoonController.createWebtoonGet);
+indexRouter.post("/create", webtoonController.createWebtoonPost);
 
 export default indexRouter;

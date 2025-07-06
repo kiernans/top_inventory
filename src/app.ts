@@ -8,6 +8,9 @@ const app: Express = express();
 app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "ejs");
 
+// Set up parsing into req.body
+app.use(express.urlencoded({ extended: true }));
+
 app.use("/", indexRouter);
 
 const PORT = process.env.EXPRESS_PORT;

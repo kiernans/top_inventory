@@ -15,12 +15,16 @@
             <ul>
                 <li>ID: <%= webtoon.id%>
                 </li>
-                <li>Title: <%= webtoon.title%>
+                <li>Title:
+                    <a href="/<%= webtoon.id %>/update">
+                        <%= webtoon.title%>
+                    </a>
                 </li>
                 <li>Author: <%= webtoon.author%>
                 </li>
                 <li>Genre: <%= webtoon.genre%>
                 </li>
+
             </ul>
 
             <%})}%>

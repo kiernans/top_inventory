@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>
+        <%= title%>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <%= title%>
+    </h1>
+    <form action="/<%= webtoon.id %>/update" method="POST">
+        <label for="title">Title: </label>
+        <input type="text" name="title" id="title" value="<%=webtoon.title%>" required>
+        <label for="author">Author: </label>
+        <input type="text" name="author" id="author" value="<%=webtoon.author%>" required>
+        <label for="genre">Genre: </label>
+        <input type="text" name="genre" id="genre" value="<%=webtoon.genre%>" required>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/">Back to home</a>
+</body>
+
+</html>

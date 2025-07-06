@@ -1,5 +1,5 @@
 import express, { Express, Request, Response, NextFunction } from "express";
-import indexRouter from "./routes/indexRouter";
+import webtoonRouter from "./routes/webtoonRouter";
 import path from "node:path";
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 require("dotenv").config();
@@ -11,7 +11,7 @@ app.set("view engine", "ejs");
 // Set up parsing into req.body
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/", indexRouter);
+app.use("/", webtoonRouter);
 
 const PORT = process.env.EXPRESS_PORT;
 app.listen(PORT, () => {

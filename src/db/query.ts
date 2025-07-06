@@ -1,11 +1,23 @@
 import pool from "./pool";
 
-async function getAllEntries() {
-    const { rows } = await pool.query("SELECT * FROM webtoons");
+interface Webtoon {
+    id: string,
+    title: string,
+    author: string,
+    genre: string
+}
+
+async function getAllWebtoons() {
+    const { rows } = await pool.query("SELECT * FROM webtoons ORDER BY id");
     return rows;
 }
 
-async function insertEntry(title: string, author: string, genre: string) {
+async function getWebtoonById(id: number) {
+    const { rows } = await pool.query("SELECT * FROM webtoons WHERE id=$1", [id]);
+    return rows[0];
+}
+
+async function insertWebtoon(title: string, author: string, genre: string) {
     await pool.query(`
         INSERT INTO
         webtoons (title, author, genre, added)
@@ -15,10 +27,25 @@ async function insertEntry(title: string, author: string, genre: string) {
         ($2),
         ($3),
         ($4))`, [title, author, genre, new Date()]
-    )
+    );
+}
+
+async function updateWebtoon({ id, title, author, genre }: Webtoon) {
+    await pool.query(`
+        UPDATE webtoons
+        SET 
+            title = ($1), 
+            author = ($2), 
+            genre = ($3)
+        WHERE id = ($4)
+        `, [title, author, genre, id]);
 }
 
 
 
-
-export default { getAllEntries, insertEntry };
+export default {
+    getAllWebtoons,
+    getWebtoonById,
+    insertWebtoon,
+    updateWebtoon
+};

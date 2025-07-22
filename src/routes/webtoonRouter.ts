@@ -8,5 +8,6 @@ webtoonRouter.get("/create", webtoonController.createWebtoonGet);
 webtoonRouter.post("/create", webtoonController.createWebtoonPost);
 webtoonRouter.get("/:id/update", webtoonController.updateWebtoonGet);
 webtoonRouter.post("/:id/update", webtoonController.updateWebtoonPost);
+webtoonRouter.post("/:id/delete", webtoonController.deleteWebtoonPost);
 
 export default webtoonRouter;

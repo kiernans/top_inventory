@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import db from "../db/query";
-import { title } from "node:process";
 
 async function getAllWebtoons(req: Request, res: Response) {
     const webtoons = await db.getAllWebtoons();
@@ -37,10 +36,17 @@ async function updateWebtoonPost(req: Request, res: Response) {
     res.redirect("/");
 }
 
+async function deleteWebtoonPost(req: Request, res: Response) {
+    const { id } = req.params;
+    await db.deleteWebtoonById(id);
+    res.redirect("/");
+}
+
 export default {
     getAllWebtoons,
     createWebtoonGet,
     createWebtoonPost,
     updateWebtoonGet,
-    updateWebtoonPost
+    updateWebtoonPost,
+    deleteWebtoonPost
 };

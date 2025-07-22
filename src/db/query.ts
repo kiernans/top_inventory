@@ -41,11 +41,19 @@ async function updateWebtoon({ id, title, author, genre }: Webtoon) {
         `, [title, author, genre, id]);
 }
 
+async function deleteWebtoonById(id: string) {
+    await pool.query(`
+        DELETE FROM webtoons
+        WHERE id = ($1)
+        `, [id]);
+}
+
 
 
 export default {
     getAllWebtoons,
     getWebtoonById,
     insertWebtoon,
-    updateWebtoon
+    updateWebtoon,
+    deleteWebtoonById
 };
